@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas onmousedown="attck()"></canvas>
+    
+    <script>
+        //基本設定
+        var canvas = document.querySelector('canvas');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        var ctx = canvas.getContext('2d');
+
+        //圖片來源
+        var monster1 = new Image();
+        monster1.src = 'monster.png';
+        var monster2 = new Image();
+        monster2.src = 'monster1.png';
+
+        setInterval(init, 100);
+       
+        function init(){
+        ctx.clearRect(0, 0, innerWidth, innerHeight);
+        ctx.drawImage(monster1, 100,100)
+        }
+        
+        function attck(){
+        ctx.drawImage(monster2, 100,100)
+        }
+
+    </script>
+
+</body>
+</html>
